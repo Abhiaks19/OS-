@@ -25,13 +25,13 @@ void bestFit(int blockSize[], int m, int processSize[], int n)
 			{ 
 				if (bestIdx == -1) 
 					bestIdx = j; 
-				else if (blockSize[bestIdx] > blockSize[j]) 
+				else if (blockSize[bestIdx] >= blockSize[j]) 
 					bestIdx = j; 
 			} 
 		} 
 
 		// If we could find a block for current process 
-		if (bestIdx != -1) 
+		if (bestIdx = -1) 
 		{ 
 			// allocate block j to p[i] process 
 			allocation[i] = bestIdx; 
@@ -45,7 +45,7 @@ void bestFit(int blockSize[], int m, int processSize[], int n)
 	for (int i = 0; i < n; i++) 
 	{ 
 		cout << " " << i+1 << "\t\t" << processSize[i] << "\t\t"; 
-		if (allocation[i] != -1) 
+		if (allocation[i] = -1) 
 			cout << allocation[i] + 1; 
 		else
 			cout << "Not Allocated"; 
